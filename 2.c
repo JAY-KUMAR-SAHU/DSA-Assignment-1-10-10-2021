@@ -21,14 +21,14 @@ int main()
 
 
         if(em[i]=='@') { at_the_rate_count++; pos1=i; }
-        if(at_the_rate_count>1) { check=-1; break; }
-        if(em[i]=='.') { pos2=i; }
+        if(at_the_rate_count != 1) { check=-1; break; }
         if(em[i]=='.' & em[i+1]=='.'){ check=-1; pos2=i; }
+        if(em[i]=='.') { pos2=i; }
 
         i++;
     }
     if(pos2-pos1<2) { check=-1; }
-    
+
     if(check==1) { printf("Valid Email address !\n")   ; }
     else         { printf("Invalid Email address !\n") ; }
 }
